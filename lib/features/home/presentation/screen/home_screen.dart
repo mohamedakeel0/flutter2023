@@ -26,14 +26,24 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: const EdgeInsets.only(top: 25.0, right: 10.0, left: 10.0),
         child: Column(
           children: [
-            CategoreWidgets(context),
-            SizedBox(height: MediaQuery.of(context).size.height/AppResponsiveHeigh.h15,),
-            SizedBox(height: MediaQuery.of(context).size.height/AppResponsiveHeigh.h170*titleItem.length  ,
-              child: GridView.count(physics: NeverScrollableScrollPhysics(),
-                crossAxisCount: 2, childAspectRatio: 1 / 2.0,
+            CategoreWidgets(isCategore:
+            true, ),
+            SizedBox(
+              height:
+                  MediaQuery.of(context).size.height / AppResponsiveHeigh.h15,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height /
+                  AppResponsiveHeigh.h170 *
+                  titleItem.length,
+              child: GridView.count(
+                physics: NeverScrollableScrollPhysics(),
+                crossAxisCount: 2,
+                childAspectRatio: 1 / 2.0,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 10,
-                padding: EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
+                padding:
+                    EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
                 children: List.generate(titleItem.length, (index) {
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -58,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(right: 15.0, bottom: 15.0),
-                            child: ItemCategoreWidget(context,
+                            child: ItemCategoreWidget(
                                 isCategore: false, image: ImageAssets.shoppingBag),
                           ),
                         ],
@@ -91,7 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 }),
               ),
             ),
-
           ],
         ),
       )),

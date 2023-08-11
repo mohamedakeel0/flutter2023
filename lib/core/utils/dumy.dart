@@ -1,14 +1,14 @@
 import 'package:flutterg12023/core/resources/assets_manager.dart';
 import 'package:flutterg12023/core/resources/strings.dart';
 
-List imageHome=[
-  ImageAssets.star,
-  ImageAssets.bed,
-  ImageAssets.table,
-  ImageAssets.bed1,
-  ImageAssets.group,
-  ImageAssets.bed,
-  ImageAssets.table,
+List <HomeModel>imageHome=<HomeModel>[
+  HomeModel(imageItem:ImageAssets.star,isSelect: false),
+  HomeModel(imageItem:ImageAssets.bed,isSelect: false),
+  HomeModel(imageItem:ImageAssets.table,isSelect: false),
+  HomeModel(imageItem:ImageAssets.bed1,isSelect: false),
+  HomeModel(imageItem:ImageAssets.group,isSelect: false),
+  HomeModel(imageItem:ImageAssets.bed,isSelect: false),
+
 ];
 
 List nameCateg=[
@@ -22,6 +22,13 @@ List nameCateg=[
   AppStrings.table,
 
 ];
+class HomeModel{
+  String? imageItem;
+  bool? isSelect;
+
+
+  HomeModel({required this.imageItem, this.isSelect, });
+}
 List<ItemModel> titleItem=<ItemModel> [
   ItemModel(nameItem: AppStrings.item1,imageItem: ImageAssets.imageItem,priceItem:'\$12.00' ),
   ItemModel(nameItem: AppStrings.item2,imageItem: ImageAssets.maskGroup,priceItem:'\$25.00' ),
