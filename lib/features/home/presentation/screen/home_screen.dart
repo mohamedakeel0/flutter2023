@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(context),
+      appBar: AppBarHomeWidget(context),
       body: SingleChildScrollView(
           child: Padding(
         padding: const EdgeInsets.only(top: 25.0, right: 10.0, left: 10.0),

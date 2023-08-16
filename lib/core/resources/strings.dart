@@ -14,6 +14,11 @@ class AppStrings {
   static const table = 'Table';
   static const armchair = 'Armchair';
   static const bed = 'Bed';
+  static const shipAddress = 'Shipping Address';
+  static const titleItemShip = 'Use as the shipping address';
+  static const nameItem = 'Bruno Fernandes';
+  static const titleItem = '25 rue Robert Latouche,Nice,06200,Cote D\'azur,France';
+
 
 
 

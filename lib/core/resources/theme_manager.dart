@@ -24,8 +24,8 @@ ThemeData getApplicationTheme() {
     splashColor: AppColors.colorPrimary,
     //cardview theme
     cardTheme: CardTheme(
-        color: AppColors.white,
-        shadowColor: AppColors.black,
+        color: AppColors.white,surfaceTintColor:AppColors.grayMedium2,
+        shadowColor: AppColors.grayMedium2,
         elevation: AppSize.s5),
     //app bar theme
     appBarTheme: const AppBarTheme(

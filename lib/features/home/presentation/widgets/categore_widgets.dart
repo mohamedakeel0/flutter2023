@@ -26,7 +26,7 @@ class _CategoreWidgetsState extends State<CategoreWidgets> {
       child: ListView.separated(
         padding: EdgeInsets.zero,
         itemBuilder: (context, index) {
-          return  ItemCategoreWidget(isCategore: widget.isCategore!,index: index,image:  imageHome[index!].imageItem,);
+          return  ItemCategoreWidget(isCategore: widget.isCategore!,index: index,image:  imageHome[index].imageItem,);
         },
         separatorBuilder: (context, index) => const SizedBox(
           width: 20,

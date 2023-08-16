@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterg12023/core/resources/assets_manager.dart';
 import 'package:flutterg12023/core/resources/strings.dart';
 import 'package:flutterg12023/core/resources/values_manager.dart';
-PreferredSizeWidget AppBarWidget(context)=> AppBar(
+PreferredSizeWidget AppBarHomeWidget(context)=> AppBar(
     leading: Image(
       image: const AssetImage(ImageAssets.search),
       width: MediaQuery.of(context).size.width/AppResponsiveWidth.w60,

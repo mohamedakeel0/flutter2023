@@ -12,6 +12,7 @@ class ImageAssets{
   static const String maskGroup='$IMAGE_PATH/mask_group.png';
   static const String dor='$IMAGE_PATH/dor.png';
   static const String tam='$IMAGE_PATH/tam.png';
+  static const String edite='$IMAGE_PATH/edit.png';
 
 
 }
