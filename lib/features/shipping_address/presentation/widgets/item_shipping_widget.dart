@@ -4,10 +4,12 @@ import 'package:flutterg12023/core/resources/assets_manager.dart';
 import 'package:flutterg12023/core/resources/font_manager.dart';
 import 'package:flutterg12023/core/resources/strings.dart';
 import 'package:flutterg12023/core/utils/app_constance.dart';
+import 'package:flutterg12023/core/utils/dumy.dart';
 import 'package:flutterg12023/features/shared_widget/my_divider_widget.dart';
 
 class ItemShippingWidget extends StatefulWidget {
-  const ItemShippingWidget({Key? key}) : super(key: key);
+  int? index ;
+   ItemShippingWidget({Key? key,this.index}) : super(key: key);
 
   @override
   State<ItemShippingWidget> createState() => _ItemShippingWidgetState();
@@ -25,17 +27,27 @@ class _ItemShippingWidgetState extends State<ItemShippingWidget> {
             Row(children: [
               GestureDetector(onTap: () {
                 setState(() {
-                  select = !select;
+                  for(int i = 0; i < shoppingModel.length; i++) {
+                    if (i == widget.index) {
+                      setState(() {
+                        shoppingModel[widget.index!].isSelected = true;
+                      });
+                    } else {
+                      setState(() {
+                        shoppingModel[widget.index!].isSelected = false;
+                      });
+                    }
+                  }
                 });
               },
-                  child: Icon(select == false
+                  child: Icon(shoppingModel[widget.index!].isSelected == false
                       ? Icons.check_box_outline_blank_outlined
                       : Icons.check_box,
-                    color: select == false ? AppColors.gray : AppColors
+                    color: shoppingModel[widget.index!].isSelected == false ? AppColors.gray : AppColors
                         .black,)),
               const SizedBox(width: 10,),
               Text(
-                AppStrings.titleItemShip,
+                shoppingModel[widget.index!].titleSelect!,
                 style: Theme
                     .of(context)
                     .textTheme
@@ -43,7 +55,7 @@ class _ItemShippingWidgetState extends State<ItemShippingWidget> {
                     .copyWith(
                     fontSize: FontSize.s18,
                     fontWeight: FontWeight.w300,
-                    color: select == false ? AppColors.gray : AppColors.black
+                    color: shoppingModel[widget.index!].isSelected == false ? AppColors.gray : AppColors.black
                 ),
               )
             ],),
@@ -64,7 +76,7 @@ class _ItemShippingWidgetState extends State<ItemShippingWidget> {
 
                         Text(
 
-                          AppStrings.nameItem,
+                          shoppingModel[widget.index!].nameItem!,
 
                           style: Theme
                               .of(context)
@@ -82,7 +94,7 @@ class _ItemShippingWidgetState extends State<ItemShippingWidget> {
                       padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: Text(
 
-                        AppStrings.titleItem,
+                        shoppingModel[widget.index!].titleItem!,
 
                         style: Theme
                             .of(context)

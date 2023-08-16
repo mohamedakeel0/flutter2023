@@ -46,3 +46,17 @@ class ItemModel{
 
   ItemModel({this.nameItem, this.priceItem, this.imageItem});
 }
+class ShoppingModel{
+  bool? isSelected;
+  String? titleSelect;
+  String? nameItem;
+  String? titleItem;
+
+
+  ShoppingModel({this.isSelected,this.titleSelect,this.nameItem,this.titleItem});
+}
+List<ShoppingModel>shoppingModel=[
+  ShoppingModel(nameItem: AppStrings.nameItem,isSelected:false ,titleItem: AppStrings.titleItem,titleSelect: AppStrings.titleItemShip ),
+  ShoppingModel(nameItem: AppStrings.nameItem,isSelected:false ,titleItem: AppStrings.titleItem,titleSelect: AppStrings.titleItemShip ),
+  ShoppingModel(nameItem: AppStrings.nameItem,isSelected:false ,titleItem: AppStrings.titleItem,titleSelect: AppStrings.titleItemShip ),
+];
